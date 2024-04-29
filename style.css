@@ -1,16 +1,15 @@
-/* General */
+/* GENERAL */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
 * {
     margin: 0;
-    padding: 0
+    padding: 0;
 }
 
 body {
     font-family: "Poppins", sans-serif;
 }
 
-/* smooth scrolling to links on page */
 html{
     scroll-behavior: smooth;
 }
@@ -19,7 +18,7 @@ p {
     color: rgb(85, 85, 85);
 }
 
-/* TRANSITION, kdykoli na ne klikneme... budou mit ruznych styles */
+/* TRANSITION */
 a, .btn {
     transition:all 300ms ease;
 }
@@ -33,7 +32,7 @@ nav,
 nav {
     justify-content: space-around;
     align-items: center;
-    /*  viewport height:  nav zabere  17 z vysky celeho screenu */
+    /* 17% z vysky stranky */
     height: 17vh; 
 }
 
@@ -100,7 +99,9 @@ a:hover {
     width: fit-content;
     max-height: 0;
     overflow: hidden;
-    transition: all 0.3 ease-in-out;
+    transition: all 0.3s ease-in-out;
+    z-index: 1;
+    border-radius: 5%;
 }
 
 .menu-links a {
@@ -144,11 +145,11 @@ a:hover {
     transform: none;
 }
 
-/* SECTION */
-
+/* SECTIONs */
 section {
     padding-top: 4vh;
     height: 96vh;
+    /* sekce cely viewpord h */
     margin: 0 10rem;
     box-sizing: border-box;
     /*timhle si zajistime aby se nedelo overlapping*/
@@ -168,6 +169,7 @@ Tady to pisu odelene pro prehlednost, ale u jiniych projektu muzu usetrit misto 
     justify-content: center;
     gap: 5rem;
     height: 80vh;
+    position: relative;
 }
 
 .section__pic-container {
@@ -175,7 +177,6 @@ Tady to pisu odelene pro prehlednost, ale u jiniych projektu muzu usetrit misto 
     height: 400px;
     width: 400px;
     margin: auto 0;
-    
 }
 
 .section__text {
@@ -192,7 +193,7 @@ Tady to pisu odelene pro prehlednost, ale u jiniych projektu muzu usetrit misto 
 }
 
 .section__text__p2 {
-    font-size: 1.75em;
+    font-size: 1.75rem;
     margin-bottom: 1rem;
 }
 
@@ -223,11 +224,10 @@ Tady to pisu odelene pro prehlednost, ale u jiniych projektu muzu usetrit misto 
 
 .btn {
     font-weight: 600;
-    transition: all 600ms ease;
+    transition: all 300ms ease;
     padding: 1rem;
     width: 8rem;
     border-radius: 2rem;
-
 }
 
 .btn-color-1, 
@@ -264,7 +264,7 @@ Tady to pisu odelene pro prehlednost, ale u jiniych projektu muzu usetrit misto 
 
 /* ABOUT SECTION */
 
-#About {
+#about {
     position: relative;
 }
 
@@ -302,7 +302,6 @@ Tady to pisu odelene pro prehlednost, ale u jiniych projektu muzu usetrit misto 
     border-radius: 2rem;
     border: rgb(53, 53, 53) 0.1rem solid;
     border-color: rgb(163, 163, 163);
-
     text-align: center;
 }
 
@@ -319,8 +318,7 @@ Tady to pisu odelene pro prehlednost, ale u jiniych projektu muzu usetrit misto 
 
 /* EXPERIENCE SECTION */
 
-#Experience {
-    /* tohle jsem davam kvuli posuvny sipce v absolutni pozici */
+#experience {
     position: relative;
 }
 
@@ -358,7 +356,7 @@ article .icon {
 }
 
 /*  PROJECTS SECTION  */
-#Projects {
+#projects {
     position: relative;
 }
 
@@ -413,7 +411,7 @@ article .icon {
 .contact-info-container p {
     font-size: larger;
 }
-
+/* nechci pointer na ikone, neni to obsah */
 .contact-icon {
     cursor: default;
 }
